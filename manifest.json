@@ -1,0 +1,72 @@
+{
+  "ModuleName": "WaterdogPE",
+  "Author": "Acidicts",
+  "AppName": "WaterdogPE Bedrock Proxy",
+  "AppVersion": "1.0.0",
+  "Description": "AMP Panel configuration for WaterdogPE — a high-performance Minecraft: Bedrock Edition proxy server.",
+  "Url": "https://github.com/Acidicts/AmpConfigs",
+  "ProjectUrl": "https://waterdog.dev",
+  "MinAMPVersion": "2.4.3.2",
+
+  "SupportedOS": ["Linux", "Windows"],
+  "SupportedPlatforms": ["amd64", "arm64"],
+
+  "ContainerImage": "",
+  "MetaUser": "amp",
+
+  "StartupPath": ".",
+  "StartupExecutable": "java",
+  "StartupArguments": "-Xmx{MaxRAMMB}M -jar WaterdogPE.jar",
+
+  "StopCommand": "stop",
+  "SteamAppID": "",
+
+  "Ports": [
+    {
+      "Name": "Game Port",
+      "Description": "Primary Bedrock listener port",
+      "Protocol": "UDP",
+      "Default": 19132,
+      "Range": "",
+      "IsMain": true
+    }
+  ],
+
+  "Settings": [
+    {
+      "Name": "JavaVersion",
+      "Node": "JavaVersion",
+      "Description": "Java version used to run WaterdogPE",
+      "Default": "17",
+      "Type": "Text",
+      "Category": "Java"
+    },
+    {
+      "Name": "MaxRAMMB",
+      "Node": "MaxRAMMB",
+      "Description": "Maximum RAM allocated to the server (in MB)",
+      "Default": "1024",
+      "Type": "Int",
+      "Category": "Java"
+    }
+  ],
+
+  "UpdateSources": [
+    {
+      "Name": "WaterdogPE JAR",
+      "Description": "Downloads the latest WaterdogPE release JAR from GitHub",
+      "Source": "https://github.com/WaterdogPE/WaterdogPE/releases/latest/download/Waterdog.jar",
+      "Destination": "WaterdogPE.jar"
+    },
+    {
+      "Name": "Eclipse Temurin Java 17",
+      "Description": "Downloads and extracts Eclipse Temurin OpenJDK 17 runtime",
+      "Source": "https://api.adoptium.net/v3/binary/latest/17/ga/linux/x64/jre/hotspot/normal/eclipse",
+      "Destination": "jre/"
+    }
+  ],
+
+  "Tags": ["minecraft", "bedrock", "proxy", "waterdogpe"],
+  "Category": "Game Servers",
+  "DisplayImageShape": "Square"
+}
