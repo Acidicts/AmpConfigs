@@ -1,0 +1,70 @@
+[
+    {
+        "DisplayName": "Java Version",
+        "Category": "WaterdogPE:stadia_controller",
+        "Subcategory": "Java:local_cafe:1",
+        "Description": "Sets the Eclipse Temurin Java version to install. WaterdogPE requires Java 17 or newer. Update the server after changing this setting",
+        "Keywords": "java,version,JavaVersion",
+        "FieldName": "JavaVersion",
+        "InputType": "enum",
+        "ParamFieldName": "JavaVersion",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "21",
+        "EnumValues": {
+            "25": "25 - LTS",
+            "24": "24",
+            "23": "23",
+            "22": "22",
+            "21": "21 - LTS (default)",
+            "20": "20",
+            "19": "19",
+            "18": "18",
+            "17": "17 - LTS"
+        }
+    },
+    {
+        "DisplayName": "Minimum Memory",
+        "Category": "WaterdogPE:stadia_controller",
+        "Subcategory": "Java:local_cafe:1",
+        "Description": "Sets Java's minimum heap size",
+        "Keywords": "minimum,memory,heap,MinMemory",
+        "FieldName": "MinMemory",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MinMemory",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "512",
+        "Suffix": "MB",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Maximum Memory",
+        "Category": "WaterdogPE:stadia_controller",
+        "Subcategory": "Java:local_cafe:1",
+        "Description": "Sets Java's maximum heap size",
+        "Keywords": "maximum,memory,heap,MaxMemory",
+        "FieldName": "MaxMemory",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "MaxMemory",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1024",
+        "Suffix": "MB",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Additional Java Arguments",
+        "Category": "WaterdogPE:stadia_controller",
+        "Subcategory": "Java:local_cafe:1",
+        "Description": "Specifies any additional command line arguments to run Java with (NOT options passed to the WaterdogPE jar)",
+        "Keywords": "command,line,arguments,args,java,CustomJavaArgs",
+        "FieldName": "CustomJavaArgs",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "CustomJavaArgs",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "Placeholder": "-XX:+UseG1GC",
+        "EnumValues": {}
+    }
+]
